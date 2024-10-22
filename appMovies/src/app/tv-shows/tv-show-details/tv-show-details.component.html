@@ -1,0 +1,20 @@
+<div *ngIf="show" class="container my-3">
+    <div class="card m-auto">
+      <div class="img-cont">
+        <img [src]="show.icon" class="card-img-top" alt="{{ show.name }} Poster">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ show.name }}</h5>
+        <p class="card-text">
+          <strong>Channel:</strong> {{ show.channel }}<br>
+          <strong>Start Year:</strong> {{ show.start }}<br>
+          <strong>End Year:</strong> {{ show.end }}<br>
+          <strong>Category:</strong> {{ show.cat }}<br>
+          <strong>Rating:</strong> {{ show.rating }}<br>
+        </p>
+        <p class="card-text">{{ show.desc }}</p>
+      </div>
+    </div>
+  </div>
+<!-- <div>id: {{id}}</div>
+<div>name:{{name_show}}</div> -->

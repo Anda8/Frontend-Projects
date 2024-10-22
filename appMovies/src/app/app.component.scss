@@ -1,0 +1,13 @@
+  #main {
+    min-height: calc(100vh - 123px);
+  }
+  ::selection {
+    color: rgb(252, 227, 227);
+    background-color: rgb(160, 1, 1);
+}
+
+::-moz-selection {
+    color: rgb(252, 227, 227);
+    background-color: rgb(160, 1, 1);
+}
+

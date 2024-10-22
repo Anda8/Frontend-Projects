@@ -1,0 +1,36 @@
+.card {
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+.btn-danger {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card:hover .show-details {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+}
+.show-details {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: none;
+    overflow-y: auto; 
+  }
+  
+//   .show-details h5 {
+//     margin: 0 0 10px;
+//     font-size: 1.2rem;
+//   }

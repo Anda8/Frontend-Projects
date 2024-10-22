@@ -1,0 +1,11 @@
+<ng-container *ngIf="shouldRender">
+  <app-navbar></app-navbar>
+</ng-container>
+
+<div id="main">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-container *ngIf="shouldRender">
+  <app-footer></app-footer>
+</ng-container>

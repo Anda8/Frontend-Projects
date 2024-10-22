@@ -1,0 +1,20 @@
+.card {
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.btn-danger {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+    filter: brightness(70%);
+}

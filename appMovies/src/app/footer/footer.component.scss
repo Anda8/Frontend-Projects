@@ -1,0 +1,17 @@
+a{
+  color: black;
+}
+.email-field:focus{
+  &:focus {
+    outline: none;
+    border: 1px solid red;
+  }
+}
+.footer-btn {
+  z-index: 4;
+}
+.hov:hover {
+  transition: color 0.3s ease-in-out;
+  color: red;
+  cursor: pointer;
+}

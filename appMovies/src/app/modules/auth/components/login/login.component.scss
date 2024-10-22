@@ -1,0 +1,41 @@
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.platforms .google img,
+.platforms .apple img {
+    width: 15px;
+}
+
+.platforms .google,
+.platforms .apple {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  padding: 5px 25px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.platforms .google div,
+.platforms .apple div {
+  font-size: 14px;
+}
+
+.separator-line {
+  border-color: #ccc !important;
+}
+
+input:focus{
+box-shadow: none;
+  outline: none;
+  border-color: #dee2e6;
+}
+
+.form-check-input:checked {
+  background-color:black;
+  border-color: #ccc;
+  color: #d2caca;
+}

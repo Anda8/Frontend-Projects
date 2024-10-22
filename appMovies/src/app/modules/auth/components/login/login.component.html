@@ -1,0 +1,82 @@
+<div class="row justify-content-center m-0 py-4">
+  <div class="col-md-6 col-10">
+    <div class="card p-4 rounded-3">
+      <div class="mb-2 text">
+        <legend>Sign In</legend>
+        <small [routerLink]="['/auth/register']">New to Netflix? <a class="fw-bold text-black">Sign up now.</a></small>
+      </div>
+      <div class="platforms mb-2 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+        <div class="col-6">
+          <div class="google g-3 d-flex align-items-center justify-content-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" />
+            <div>Use Google</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="apple g-3 d-flex align-items-center justify-content-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple" />
+            <div>Use Apple</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex my-2 align-items-center text-center">
+        <div class="separator-line flex-grow-1 border-bottom border-secondary"></div>
+        <div class="mx-2">OR</div>
+        <div class="separator-line flex-grow-1 border-bottom border-secondary"></div>
+      </div>
+      <!--template driven-->
+      <!-- <form #LoginForm (ngSubmit)="submit(LoginForm)" -->
+      <form #LoginForm="ngForm" (ngSubmit)="submit(LoginForm)" aria-label="Login">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email </label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Email or mobile number" name="email" #email="ngModel"
+             ngModel required email
+              [class.is-invalid]="email.invalid && email.touched"
+              [class.is-valid]="email.valid && email.touched"/>
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+          <div *ngIf="email.invalid && email.touched">
+            <ng-container *ngIf="email.errors">
+              <small class="text-danger" *ngIf="email.errors['required']">
+                Email is required.
+              </small>
+              <small class="text-danger" *ngIf="email.errors['email']">
+                Email not correct
+              </small>
+            </ng-container>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="d-flex justify-content-between">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <a href="" class="text-danger">Forget password?</a>
+          </div>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password"
+            ngModel #password="ngModel" password required minlength="4"
+            [class.is-invalid]="password.invalid && password.touched"
+            [class.is-valid]="password.valid && password.touched" />
+          <div *ngIf="password.invalid && password.touched">
+            <ng-container *ngIf="password.errors">
+              <small class="text-danger" *ngIf="password.errors['required']">
+                Password is required.
+              </small>
+              <small class="text-danger" *ngIf="password.errors['minlength']">
+                Password Length must larger than 3
+              </small>
+            </ng-container>
+          </div>
+        </div>
+        <div class="container mt-3">
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="rememberMe" ngModel />
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-danger w-100" [disabled]="LoginForm.invalid">Sign In</button>
+      </form>
+
+    </div>
+  </div>
+</div>

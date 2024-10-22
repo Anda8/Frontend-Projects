@@ -1,0 +1,21 @@
+<div *ngIf="mov" class="container my-3">
+  <div class="card m-auto">
+    <div class="img-cont">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + mov.poster_path" class="card-img-top" alt="Movie Poster">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">{{ mov.title }}</h5>
+      <p class="card-text">{{ mov.overview }}</p>
+      <ul class=" list-group-flush">
+        <li><strong>Original Title: </strong>{{ mov.original_title }}</li>
+        <li><strong>Release Date: </strong>{{ mov.release_date }}</li>
+        <li><strong>Rating: </strong>{{ mov.vote_average }}</li>
+        <li><strong>Votes: </strong>{{ mov.vote_count }}</li>
+        <li><strong>Popularity: </strong>{{ mov.popularity }}</li>
+        <li><strong>Adult: </strong>{{ mov.adult ? 'Yes' : 'No' }}</li>
+        <li><strong>Language: </strong>{{ mov.original_language }}</li>
+      </ul>
+      <button href="#" class="btn btn-primary d-flex justify-content-end">Watch Trailer</button>
+    </div>
+  </div>
+</div>

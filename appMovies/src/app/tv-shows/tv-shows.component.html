@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <ng-container *ngIf="tvShow.length > 0; else noShowDetails">
+    <div class="row gy-2 justify-content-center">
+      <ng-container *ngFor="let tvshow of tvShow">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <app-tv-show-item [show]="tvshow" (click)="onShowSelect(tvshow)"></app-tv-show-item>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
+
+
+
+<ng-template #noShowDetails>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-8 col-10 text-center">
+        <img
+          src="https://img.freepik.com/premium-vector/search-found-no-data-found-data-empty_1249780-8.jpg?ga=GA1.2.584415855.1675101629&semt=ais_hybrid"
+          alt="No movies available" class="img-fluid mb-3">
+        <h4>No Movies Available</h4>
+      </div>
+    </div>
+  </ng-template>

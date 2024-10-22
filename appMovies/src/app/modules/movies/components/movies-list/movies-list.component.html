@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row gy-3 justify-content-center">
+   <ng-container *ngIf="isLoading; else elseTemplate">
+<div class="d-flex align-items-center justify-content-center">loading...</div>
+   </ng-container>
+   <ng-template #elseTemplate>
+    <ng-container *ngIf="movies.length > 0; else noMovies">
+      <ng-container *ngFor="let movie of movies">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <app-movie-item [mov]="movie" (click)="onMovieSelect(movie)"> </app-movie-item>
+        </div>
+      </ng-container>
+    </ng-container>
+   </ng-template>
+
+    </div>
+
+  <ng-template #noMovies>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-8 col-10 text-center">
+        <img
+          src="https://img.freepik.com/premium-vector/search-found-no-data-found-data-empty_1249780-8.jpg?ga=GA1.2.584415855.1675101629&semt=ais_hybrid"
+          alt="No movies available" class="img-fluid mb-3" style="max-width: 100%;">
+        <h4>No Movies Available</h4>
+      </div>
+    </div>
+  </ng-template>
+</div>
