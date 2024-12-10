@@ -45,6 +45,7 @@
 
 .navbar ul.icons {
     gap: 15px;
+  cursor: pointer;
 }
 
 .nav-menu,
