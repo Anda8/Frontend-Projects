@@ -55,8 +55,15 @@
         justify-content: space-between;
     }
 
-    .navbar .nav-menu {
+     .navbar .nav-menu {
         display: none;
+       flex-direction: column; 
+        width: 100%; 
+        z-index: 10;
+       padding: 1rem;
+    }
+    .nav-menu.visible {
+        display: flex;
     }
 
     .containerBody .navbar .nav-icons .menu {
