@@ -66,7 +66,6 @@
 .containerBody .navbar ul .menu {
     display: none;
 }
-
 .page-content {
     min-height: 100vh;
     background: var(--bs-black);
