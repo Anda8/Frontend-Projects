@@ -57,11 +57,13 @@
 
     .navbar .nav-menu {
         display: none;
-       flex-direction: column; 
-        width: 100%; 
-        z-index: 10;
-       padding: 1rem;
-    }
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0000003a;
+      }
     .nav-menu.visible {
         display: flex;
     }
@@ -179,4 +181,3 @@
         padding: 3rem;
     }
 }
-
